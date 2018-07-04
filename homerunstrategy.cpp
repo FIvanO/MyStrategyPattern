@@ -1,6 +1,6 @@
 #include "homerunstrategy.h"
+#include <iostream>
 
-HomeRunStrategy::HomeRunStrategy()
-{
-
+void HomeRunStrategy::run() {
+	std::cout << "Home run" << std::endl;
 }
