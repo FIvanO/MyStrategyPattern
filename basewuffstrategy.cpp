@@ -1,6 +1,6 @@
 #include "basewuffstrategy.h"
+#include <iostream>
 
-BaseWuffStrategy::BaseWuffStrategy()
-{
-
+void BaseWuffStrategy::wuff() {
+	std::cout << "regular wuff" << std::endl;
 }
