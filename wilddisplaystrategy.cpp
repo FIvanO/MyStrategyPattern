@@ -1,6 +1,6 @@
 #include "wilddisplaystrategy.h"
+#include <iostream>
 
-WildDisplayStrategy::WildDisplayStrategy()
-{
-
+void WildDisplayStrategy::display() {
+	std::cout << "I'm wild dog" << std::endl;
 }
