@@ -1,6 +1,6 @@
 #include "rubberwuffstrategy.h"
+#include <iostream>
 
-RubberWuffStrategy::RubberWuffStrategy()
-{
-
+void RubberWuffStrategy::wuff() {
+	std::cout << "Squeaky wuff" << std::endl;
 }
