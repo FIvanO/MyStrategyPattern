@@ -1,6 +1,6 @@
 #include "homedisplaystrategy.h"
+#include <iostream>
 
-HomeDisplayStrategy::HomeDisplayStrategy()
-{
-
+void HomeDisplayStrategy::display() {
+	std::cout << "I'm home dog" << std::endl;
 }
