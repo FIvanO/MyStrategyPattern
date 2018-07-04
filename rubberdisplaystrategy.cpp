@@ -1,6 +1,6 @@
 #include "rubberdisplaystrategy.h"
+#include <iostream>
 
-RubberDisplayStrategy::RubberDisplayStrategy()
-{
-
+void RubberDisplayStrategy::display() {
+	std::cout << "I'm rubber dog" << std::endl;
 }
