@@ -1,11 +1,13 @@
 #ifndef CITYDISPLAYSTRATEGY_H
 #define CITYDISPLAYSTRATEGY_H
 
+#include "idisplaystrategy.h"
 
 class CityDisplayStrategy : public IDisplayStrategy
 {
 public:
-	CityDisplayStrategy();
+	CityDisplayStrategy() {}
+	void display();
 };
 
 #endif // CITYDISPLAYSTRATEGY_H

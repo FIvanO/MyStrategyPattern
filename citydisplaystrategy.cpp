@@ -1,6 +1,6 @@
 #include "citydisplaystrategy.h"
+#include "iostream"
 
-CityDisplayStrategy::CityDisplayStrategy()
-{
-
+void CityDisplayStrategy::display() {
+	std::cout << "I'm city dog" << std::endl;
 }
