@@ -1,6 +1,6 @@
 #include "norunstrategy.h"
+#include <iostream>
 
-NoRunStrategy::NoRunStrategy()
-{
-
+void NoRunStrategy::run() {
+	std::cout << "I can't run" << std::endl;
 }
