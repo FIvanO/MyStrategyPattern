@@ -15,4 +15,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp
+        main.cpp \
+    dog.cpp \
+    norunstrategy.cpp \
+    baserunstrategy.cpp \
+    homerunstrategy.cpp \
+    rubberwuffstrategy.cpp \
+    wildwuffstrategy.cpp \
+    basewuffstrategy.cpp \
+    rubberdisplaystrategy.cpp \
+    wilddisplaystrategy.cpp \
+    citydisplaystrategy.cpp \
+    homedisplaystrategy.cpp
+
+HEADERS += \
+    dog.h \
+    irunstrategy.h \
+    iwuffstrategy.h \
+    idisplaystrategy.h \
+    norunstrategy.h \
+    baserunstrategy.h \
+    homerunstrategy.h \
+    rubberwuffstrategy.h \
+    wildwuffstrategy.h \
+    basewuffstrategy.h \
+    rubberdisplaystrategy.h \
+    wilddisplaystrategy.h \
+    citydisplaystrategy.h \
+    homedisplaystrategy.h
