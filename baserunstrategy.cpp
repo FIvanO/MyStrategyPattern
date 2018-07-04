@@ -1,6 +1,6 @@
 #include "baserunstrategy.h"
+#include <iostream>
 
-BaseRunStrategy::BaseRunStrategy()
-{
-
+void BaseRunStrategy::run() {
+	std::cout << "Just base run" << std::endl;
 }
