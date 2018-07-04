@@ -1,0 +1,4 @@
+#ifndef IWUFFSTRATEGY_H
+#define IWUFFSTRATEGY_H
+
+#endif // IWUFFSTRATEGY_H
