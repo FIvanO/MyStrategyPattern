@@ -1,6 +1,6 @@
 #include "wildwuffstrategy.h"
+#include <iostream>
 
-WildWuffStrategy::WildWuffStrategy()
-{
-
+void WildWuffStrategy::wuff() {
+	std::cout << "Angry wuff" << std::endl;
 }
