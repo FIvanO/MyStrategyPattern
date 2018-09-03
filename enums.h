@@ -8,15 +8,15 @@ enum class dis_type {
 };
 
 enum class run_type {
-    home = 0,
-    base = 1,
-    no   = 2
+    home   = 0,
+    base   = 1,
+    no_run = 2
 };
 
 enum class wuff_type {
-    base = 0,
-    wild = 1,
-    rubb = 2
+    base   = 0,
+    wild   = 1,
+    rubber = 2
 };
 
 

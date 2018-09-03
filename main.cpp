@@ -63,8 +63,8 @@ int main()
 
     dogs.push_back( // rubberDog
         Dog(
-            run_strategies    [static_cast<size_t>(run_type::no)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::rubb)],
+            run_strategies    [static_cast<size_t>(run_type::no_run)],
+            wuff_strategies   [static_cast<size_t>(wuff_type::rubber)],
             display_strategies[static_cast<size_t>(dis_type::graphic)]
             )
      ); // rubberDog
