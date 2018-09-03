@@ -38,54 +38,66 @@ int main()
 
     std::vector<std::shared_ptr<Dog>> dogs;
     dogs.push_back( // homeDog
-        std::shared_ptr<Dog>(new Dog(
-            run_strategies    [static_cast<size_t>(run_type::home)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::base)],
-            display_strategies[static_cast<size_t>(dis_type::text)]
-            ))
-     ); // homeDog
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(run_type::home)],
+                wuff_strategies   [static_cast<size_t>(wuff_type::base)],
+                display_strategies[static_cast<size_t>(dis_type::text)]
+            )
+        )
+    ); // homeDog
 
     dogs.push_back( // cityDog
-        std::shared_ptr<Dog>(new Dog(
-            run_strategies    [static_cast<size_t>(run_type::base)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::base)],
-            display_strategies[static_cast<size_t>(dis_type::graphic)]
-            ))
-     ); // cityDog
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(run_type::base)],
+                wuff_strategies   [static_cast<size_t>(wuff_type::base)],
+                display_strategies[static_cast<size_t>(dis_type::graphic)]
+            )
+        )
+    ); // cityDog
 
     dogs.push_back( // wildDog
-        std::shared_ptr<Dog>(new Dog(
-            run_strategies    [static_cast<size_t>(run_type::base)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::wild)],
-            display_strategies[static_cast<size_t>(dis_type::text)]
-            ))
-     ); // wildDog
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(run_type::base)],
+                wuff_strategies   [static_cast<size_t>(wuff_type::wild)],
+                display_strategies[static_cast<size_t>(dis_type::text)]
+            )
+        )
+    ); // wildDog
 
     dogs.push_back( // rubberDog
-        std::shared_ptr<Dog>(new Dog(
-            run_strategies    [static_cast<size_t>(run_type::no)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::rubb)],
-            display_strategies[static_cast<size_t>(dis_type::graphic)]
-            ))
-     ); // rubberDog
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(run_type::no)],
+                wuff_strategies   [static_cast<size_t>(wuff_type::rubb)],
+                display_strategies[static_cast<size_t>(dis_type::graphic)]
+            )
+        )
+    ); // rubberDog
 
 
     srand(time(nullptr));
     dogs.push_back( // randomDog 1
-        std::shared_ptr<Dog>(new Dog(
-            run_strategies    [static_cast<size_t>(rand() % 3)],
-            wuff_strategies   [static_cast<size_t>(rand() % 3)],
-            display_strategies[static_cast<size_t>(rand() % 2)]
-            ))
-     ); // randomDog 1
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(rand() % 3)],
+                wuff_strategies   [static_cast<size_t>(rand() % 3)],
+                display_strategies[static_cast<size_t>(rand() % 2)]
+            )
+        )
+    ); // randomDog 1
 
     dogs.push_back( // randomDog 2
-        std::shared_ptr<Dog>(new Dog(
-            run_strategies    [static_cast<size_t>(rand() % 3)],
-            wuff_strategies   [static_cast<size_t>(rand() % 3)],
-            display_strategies[static_cast<size_t>(rand() % 2)]
-            ))
-     ); // randomDog 2
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(rand() % 3)],
+                wuff_strategies   [static_cast<size_t>(rand() % 3)],
+                display_strategies[static_cast<size_t>(rand() % 2)]
+            )
+        )
+    ); // randomDog 2
 //----------------------------------------------------
 
 
@@ -97,8 +109,7 @@ int main()
         (*it)->wuff();
         std::cout << "  ";
         (*it)->display();
-        std::cout << "End dog \n\n";
-        std::cout << "\n";
+        std::cout << "End dog \n\n\n";
     }
 
 
