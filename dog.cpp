@@ -26,6 +26,6 @@ void Dog::display() {
 }
 
 Dog::~Dog() {
-    std::cout << __PRETTY_FUNCTION__ << "\n" << std::endl;
+    std::cout << "\n" << __PRETTY_FUNCTION__ << std::endl;
 }
 

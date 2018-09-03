@@ -113,8 +113,6 @@ int main()
     }
 
 
-    std::cout << "\n\n";
-
     run_strategies.clear();
     wuff_strategies.clear();
     display_strategies.clear();

@@ -7,5 +7,5 @@ void TextDisplayStrategy::display() {
 
 TextDisplayStrategy::~TextDisplayStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << "\n" << std::endl;
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
 }

@@ -7,5 +7,5 @@ void BaseRunStrategy::run() {
 
 BaseRunStrategy::~BaseRunStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << "\n" << std::endl;
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
