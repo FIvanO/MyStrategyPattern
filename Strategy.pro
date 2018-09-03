@@ -23,10 +23,8 @@ SOURCES += \
     rubberwuffstrategy.cpp \
     wildwuffstrategy.cpp \
     basewuffstrategy.cpp \
-    rubberdisplaystrategy.cpp \
-    wilddisplaystrategy.cpp \
-    citydisplaystrategy.cpp \
-    homedisplaystrategy.cpp
+    graphicdisplaystrategy.cpp \
+    textdisplaystrategy.cpp
 
 HEADERS += \
     dog.h \
@@ -39,8 +37,6 @@ HEADERS += \
     rubberwuffstrategy.h \
     wildwuffstrategy.h \
     basewuffstrategy.h \
-    rubberdisplaystrategy.h \
-    wilddisplaystrategy.h \
-    citydisplaystrategy.h \
-    homedisplaystrategy.h \
-    enums.h
+    enums.h \
+    graphicdisplaystrategy.h \
+    textdisplaystrategy.h

@@ -3,12 +3,12 @@
 
 #include "idisplaystrategy.h"
 
-class WildDisplayStrategy : public IDisplayStrategy
+class TextDisplayStrategy : public IDisplayStrategy
 {
 public:
-	WildDisplayStrategy() {}
+    TextDisplayStrategy() {}
 	void display();
-    ~WildDisplayStrategy();
+    ~TextDisplayStrategy();
 };
 
 #endif // WILDDISPLAYSTRATEGY_H

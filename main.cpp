@@ -6,10 +6,8 @@
 #include "rubberwuffstrategy.h"
 #include "wildwuffstrategy.h"
 #include "basewuffstrategy.h"
-#include "rubberdisplaystrategy.h"
-#include "wilddisplaystrategy.h"
-#include "citydisplaystrategy.h"
-#include "homedisplaystrategy.h"
+#include "graphicdisplaystrategy.h"
+#include "textdisplaystrategy.h"
 #include "enums.h"
 #include <vector>
 #include <memory>
@@ -23,10 +21,8 @@ int main()
 {
 
     std::vector<SharedPtrDis> display_strategies;
-    display_strategies.push_back(SharedPtrDis(new HomeDisplayStrategy()));
-    display_strategies.push_back(SharedPtrDis(new CityDisplayStrategy()));
-    display_strategies.push_back(SharedPtrDis(new WildDisplayStrategy()));
-    display_strategies.push_back(SharedPtrDis(new RubberDisplayStrategy()));
+    display_strategies.push_back(SharedPtrDis(new TextDisplayStrategy()));
+    display_strategies.push_back(SharedPtrDis(new GraphicDisplayStrategy()));
 
     std::vector<SharedPtrRun> run_strategies;
     run_strategies.push_back(SharedPtrRun(new HomeRunStrategy()));
@@ -45,7 +41,7 @@ int main()
         Dog(
             run_strategies    [static_cast<size_t>(run_type::home)],
             wuff_strategies   [static_cast<size_t>(wuff_type::base)],
-            display_strategies[static_cast<size_t>(dis_type::home)]
+            display_strategies[static_cast<size_t>(dis_type::text)]
             )
      ); // homeDog
 
@@ -53,7 +49,7 @@ int main()
         Dog(
             run_strategies    [static_cast<size_t>(run_type::base)],
             wuff_strategies   [static_cast<size_t>(wuff_type::base)],
-            display_strategies[static_cast<size_t>(dis_type::city)]
+            display_strategies[static_cast<size_t>(dis_type::graphic)]
             )
      ); // cityDog
 
@@ -61,7 +57,7 @@ int main()
         Dog(
             run_strategies    [static_cast<size_t>(run_type::base)],
             wuff_strategies   [static_cast<size_t>(wuff_type::wild)],
-            display_strategies[static_cast<size_t>(dis_type::wild)]
+            display_strategies[static_cast<size_t>(dis_type::text)]
             )
      ); // wildDog
 
@@ -69,7 +65,7 @@ int main()
         Dog(
             run_strategies    [static_cast<size_t>(run_type::no)],
             wuff_strategies   [static_cast<size_t>(wuff_type::rubb)],
-            display_strategies[static_cast<size_t>(dis_type::rubb)]
+            display_strategies[static_cast<size_t>(dis_type::graphic)]
             )
      ); // rubberDog
 
@@ -79,7 +75,7 @@ int main()
         Dog(
             run_strategies    [static_cast<size_t>(rand() % 3)],
             wuff_strategies   [static_cast<size_t>(rand() % 3)],
-            display_strategies[static_cast<size_t>(rand() % 4)]
+            display_strategies[static_cast<size_t>(rand() % 2)]
             )
      ); // randomDog 1
 
@@ -87,7 +83,7 @@ int main()
         Dog(
             run_strategies    [static_cast<size_t>(rand() % 3)],
             wuff_strategies   [static_cast<size_t>(rand() % 3)],
-            display_strategies[static_cast<size_t>(rand() % 4)]
+            display_strategies[static_cast<size_t>(rand() % 2)]
             )
      ); // randomDog 2
 //----------------------------------------------------

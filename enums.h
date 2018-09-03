@@ -3,10 +3,8 @@
 
 
 enum class dis_type {
-    home = 0,
-    city = 1,
-    wild = 2,
-    rubb = 3
+    text    = 0,
+    graphic = 1
 };
 
 enum class run_type {
