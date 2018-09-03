@@ -36,55 +36,55 @@ int main()
 
 //----------------------------------------------------
 
-    std::vector<Dog> dogs;
+    std::vector<std::shared_ptr<Dog>> dogs;
     dogs.push_back( // homeDog
-        Dog(
+        std::shared_ptr<Dog>(new Dog(
             run_strategies    [static_cast<size_t>(run_type::home)],
             wuff_strategies   [static_cast<size_t>(wuff_type::base)],
             display_strategies[static_cast<size_t>(dis_type::text)]
-            )
+            ))
      ); // homeDog
 
     dogs.push_back( // cityDog
-        Dog(
+        std::shared_ptr<Dog>(new Dog(
             run_strategies    [static_cast<size_t>(run_type::base)],
             wuff_strategies   [static_cast<size_t>(wuff_type::base)],
             display_strategies[static_cast<size_t>(dis_type::graphic)]
-            )
+            ))
      ); // cityDog
 
     dogs.push_back( // wildDog
-        Dog(
+        std::shared_ptr<Dog>(new Dog(
             run_strategies    [static_cast<size_t>(run_type::base)],
             wuff_strategies   [static_cast<size_t>(wuff_type::wild)],
             display_strategies[static_cast<size_t>(dis_type::text)]
-            )
+            ))
      ); // wildDog
 
     dogs.push_back( // rubberDog
-        Dog(
+        std::shared_ptr<Dog>(new Dog(
             run_strategies    [static_cast<size_t>(run_type::no)],
             wuff_strategies   [static_cast<size_t>(wuff_type::rubb)],
             display_strategies[static_cast<size_t>(dis_type::graphic)]
-            )
+            ))
      ); // rubberDog
 
 
     srand(time(nullptr));
     dogs.push_back( // randomDog 1
-        Dog(
+        std::shared_ptr<Dog>(new Dog(
             run_strategies    [static_cast<size_t>(rand() % 3)],
             wuff_strategies   [static_cast<size_t>(rand() % 3)],
             display_strategies[static_cast<size_t>(rand() % 2)]
-            )
+            ))
      ); // randomDog 1
 
     dogs.push_back( // randomDog 2
-        Dog(
+        std::shared_ptr<Dog>(new Dog(
             run_strategies    [static_cast<size_t>(rand() % 3)],
             wuff_strategies   [static_cast<size_t>(rand() % 3)],
             display_strategies[static_cast<size_t>(rand() % 2)]
-            )
+            ))
      ); // randomDog 2
 //----------------------------------------------------
 
@@ -92,11 +92,11 @@ int main()
 	for (auto it = dogs.begin(); it != dogs.end(); ++it) {
         std::cout << "New dog: \n";
         std::cout << "  ";
-		it->run();
+		(*it)->run();
         std::cout << "  ";
-        it->wuff();
+        (*it)->wuff();
         std::cout << "  ";
-        it->display();
+        (*it)->display();
         std::cout << "End dog \n\n";
         std::cout << "\n";
     }
@@ -107,6 +107,7 @@ int main()
     run_strategies.clear();
     wuff_strategies.clear();
     display_strategies.clear();
+    dogs.clear();
 
 
     return 0;
