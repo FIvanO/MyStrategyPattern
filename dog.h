@@ -11,9 +11,9 @@ class Dog
 public:
     Dog(std::shared_ptr<IRunStrategy> _rs, std::shared_ptr<IWuffStrategy> _ws, std::shared_ptr<IDisplayStrategy> _ds);
     void run();
-	void wuff();
-	void display();
-	~Dog();
+    void wuff();
+    void display();
+    ~Dog();
 private:
     std::shared_ptr<IRunStrategy>     run_st;
     std::shared_ptr<IWuffStrategy>    wuff_st;
