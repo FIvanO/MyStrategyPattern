@@ -42,4 +42,5 @@ HEADERS += \
     rubberdisplaystrategy.h \
     wilddisplaystrategy.h \
     citydisplaystrategy.h \
-    homedisplaystrategy.h
+    homedisplaystrategy.h \
+    enums.h
