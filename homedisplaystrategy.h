@@ -8,6 +8,7 @@ class HomeDisplayStrategy : public IDisplayStrategy
 public:
 	HomeDisplayStrategy() {}
 	void display();
+    ~HomeDisplayStrategy();
 };
 
 #endif // HOMEDISPLAYSTRATEGY_H

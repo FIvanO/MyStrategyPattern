@@ -8,6 +8,7 @@ class HomeRunStrategy : public IRunStrategy
 public:
 	HomeRunStrategy() {}
 	void run();
+    ~HomeRunStrategy();
 };
 
 #endif // HOMERUNSTRATEGY_H

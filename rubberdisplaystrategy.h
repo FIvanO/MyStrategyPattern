@@ -8,6 +8,7 @@ class RubberDisplayStrategy : public IDisplayStrategy
 public:
 	RubberDisplayStrategy() {}
 	void display();
+    ~RubberDisplayStrategy();
 };
 
 #endif // RUBBERDISPLAYSTRATEGY_H

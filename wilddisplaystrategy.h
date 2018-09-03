@@ -8,6 +8,7 @@ class WildDisplayStrategy : public IDisplayStrategy
 public:
 	WildDisplayStrategy() {}
 	void display();
+    ~WildDisplayStrategy();
 };
 
 #endif // WILDDISPLAYSTRATEGY_H

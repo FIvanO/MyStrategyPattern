@@ -2,5 +2,10 @@
 #include <iostream>
 
 void BaseWuffStrategy::wuff() {
-	std::cout << "regular wuff" << std::endl;
+    std::cout << "Base wuff" << std::endl;
+}
+
+BaseWuffStrategy::~BaseWuffStrategy()
+{
+    std::cout << __PRETTY_FUNCTION__ << "\n" << std::endl;
 }

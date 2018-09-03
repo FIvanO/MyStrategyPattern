@@ -2,5 +2,10 @@
 #include <iostream>
 
 void NoRunStrategy::run() {
-	std::cout << "I can't run" << std::endl;
+    std::cout << "No run" << std::endl;
+}
+
+NoRunStrategy::~NoRunStrategy()
+{
+    std::cout << __PRETTY_FUNCTION__ << "\n" << std::endl;
 }

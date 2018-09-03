@@ -8,6 +8,7 @@ class CityDisplayStrategy : public IDisplayStrategy
 public:
 	CityDisplayStrategy() {}
 	void display();
+    ~CityDisplayStrategy();
 };
 
 #endif // CITYDISPLAYSTRATEGY_H

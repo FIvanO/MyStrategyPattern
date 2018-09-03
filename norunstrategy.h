@@ -8,6 +8,7 @@ class NoRunStrategy : public IRunStrategy
 public:
 	NoRunStrategy() {}
 	void run();
+    ~NoRunStrategy();
 };
 
 #endif // NORUNSTRATEGY_H
