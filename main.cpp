@@ -36,77 +36,87 @@ int main()
 
 //----------------------------------------------------
 
-    std::vector<Dog> dogs;
+    std::vector<std::shared_ptr<Dog>> dogs;
     dogs.push_back( // homeDog
-        Dog(
-            run_strategies    [static_cast<size_t>(run_type::home)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::base)],
-            display_strategies[static_cast<size_t>(dis_type::text)]
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(run_type::home)],
+                wuff_strategies   [static_cast<size_t>(wuff_type::base)],
+                display_strategies[static_cast<size_t>(dis_type::text)]
             )
-     ); // homeDog
+        )
+    ); // homeDog
 
     dogs.push_back( // cityDog
-        Dog(
-            run_strategies    [static_cast<size_t>(run_type::base)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::base)],
-            display_strategies[static_cast<size_t>(dis_type::graphic)]
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(run_type::base)],
+                wuff_strategies   [static_cast<size_t>(wuff_type::base)],
+                display_strategies[static_cast<size_t>(dis_type::graphic)]
             )
-     ); // cityDog
+        )
+    ); // cityDog
 
     dogs.push_back( // wildDog
-        Dog(
-            run_strategies    [static_cast<size_t>(run_type::base)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::wild)],
-            display_strategies[static_cast<size_t>(dis_type::text)]
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(run_type::base)],
+                wuff_strategies   [static_cast<size_t>(wuff_type::wild)],
+                display_strategies[static_cast<size_t>(dis_type::text)]
             )
-     ); // wildDog
+        )
+    ); // wildDog
 
     dogs.push_back( // rubberDog
-        Dog(
-            run_strategies    [static_cast<size_t>(run_type::no_run)],
-            wuff_strategies   [static_cast<size_t>(wuff_type::rubber)],
-            display_strategies[static_cast<size_t>(dis_type::graphic)]
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(run_type::no_run)],
+                wuff_strategies   [static_cast<size_t>(wuff_type::rubber)],
+                display_strategies[static_cast<size_t>(dis_type::graphic)]
             )
-     ); // rubberDog
+        )
+    ); // rubberDog
 
 
     srand(time(nullptr));
     dogs.push_back( // randomDog 1
-        Dog(
-            run_strategies    [static_cast<size_t>(rand() % 3)],
-            wuff_strategies   [static_cast<size_t>(rand() % 3)],
-            display_strategies[static_cast<size_t>(rand() % 2)]
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(rand() % 3)],
+                wuff_strategies   [static_cast<size_t>(rand() % 3)],
+                display_strategies[static_cast<size_t>(rand() % 2)]
             )
-     ); // randomDog 1
+        )
+    ); // randomDog 1
 
     dogs.push_back( // randomDog 2
-        Dog(
-            run_strategies    [static_cast<size_t>(rand() % 3)],
-            wuff_strategies   [static_cast<size_t>(rand() % 3)],
-            display_strategies[static_cast<size_t>(rand() % 2)]
+        std::shared_ptr<Dog>(
+            new Dog(
+                run_strategies    [static_cast<size_t>(rand() % 3)],
+                wuff_strategies   [static_cast<size_t>(rand() % 3)],
+                display_strategies[static_cast<size_t>(rand() % 2)]
             )
-     ); // randomDog 2
+        )
+    ); // randomDog 2
 //----------------------------------------------------
 
 
 	for (auto it = dogs.begin(); it != dogs.end(); ++it) {
         std::cout << "New dog: \n";
         std::cout << "  ";
-		it->run();
+		(*it)->run();
         std::cout << "  ";
-        it->wuff();
+        (*it)->wuff();
         std::cout << "  ";
-        it->display();
-        std::cout << "End dog \n\n";
-        std::cout << "\n";
+        (*it)->display();
+        std::cout << "End dog \n\n\n";
     }
 
-
-    std::cout << "\n\n";
 
     run_strategies.clear();
     wuff_strategies.clear();
     display_strategies.clear();
+    dogs.clear();
 
 
     return 0;
