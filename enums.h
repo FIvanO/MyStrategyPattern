@@ -2,7 +2,7 @@
 #define ENUMS_H
 
 
-enum class dis_type {
+enum class display_type {
     text    = 0,
     graphic = 1
 };

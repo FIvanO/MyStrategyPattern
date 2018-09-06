@@ -42,7 +42,7 @@ int main()
             new Dog(
                 run_strategies    [static_cast<size_t>(run_type::home)],
                 wuff_strategies   [static_cast<size_t>(wuff_type::base)],
-                display_strategies[static_cast<size_t>(dis_type::text)]
+                display_strategies[static_cast<size_t>(display_type::text)]
             )
         )
     ); // homeDog
@@ -52,7 +52,7 @@ int main()
             new Dog(
                 run_strategies    [static_cast<size_t>(run_type::base)],
                 wuff_strategies   [static_cast<size_t>(wuff_type::base)],
-                display_strategies[static_cast<size_t>(dis_type::graphic)]
+                display_strategies[static_cast<size_t>(display_type::graphic)]
             )
         )
     ); // cityDog
@@ -62,7 +62,7 @@ int main()
             new Dog(
                 run_strategies    [static_cast<size_t>(run_type::base)],
                 wuff_strategies   [static_cast<size_t>(wuff_type::wild)],
-                display_strategies[static_cast<size_t>(dis_type::text)]
+                display_strategies[static_cast<size_t>(display_type::text)]
             )
         )
     ); // wildDog
@@ -72,7 +72,7 @@ int main()
             new Dog(
                 run_strategies    [static_cast<size_t>(run_type::no_run)],
                 wuff_strategies   [static_cast<size_t>(wuff_type::rubber)],
-                display_strategies[static_cast<size_t>(dis_type::graphic)]
+                display_strategies[static_cast<size_t>(display_type::graphic)]
             )
         )
     ); // rubberDog
