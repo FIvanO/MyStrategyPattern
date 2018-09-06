@@ -5,7 +5,6 @@
 
 class WildWuffStrategy : public IWuffStrategy {
 public:
-	WildWuffStrategy() {}
 	void wuff();
     ~WildWuffStrategy();
 };

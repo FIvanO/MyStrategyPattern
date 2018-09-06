@@ -4,8 +4,7 @@
 class IDisplayStrategy
 {
 public:
-	IDisplayStrategy() {}
-	virtual void display() {}
+    virtual void display() = 0;
 	virtual ~IDisplayStrategy() {}
 };
 

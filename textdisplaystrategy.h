@@ -6,7 +6,6 @@
 class TextDisplayStrategy : public IDisplayStrategy
 {
 public:
-    TextDisplayStrategy() {}
 	void display();
     ~TextDisplayStrategy();
 };

@@ -4,8 +4,7 @@
 class IRunStrategy
 {
 public:
-	IRunStrategy() {}
-	virtual void run() {}
+    virtual void run() = 0;
 	virtual ~IRunStrategy() {}
 };
 

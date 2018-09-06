@@ -6,7 +6,6 @@
 class HomeRunStrategy : public IRunStrategy
 {
 public:
-	HomeRunStrategy() {}
 	void run();
     ~HomeRunStrategy();
 };

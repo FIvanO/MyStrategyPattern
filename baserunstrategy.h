@@ -6,7 +6,6 @@
 class BaseRunStrategy : public IRunStrategy
 {
 public:
-	BaseRunStrategy() {}
 	void run();
     ~BaseRunStrategy();
 };

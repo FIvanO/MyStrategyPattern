@@ -4,8 +4,7 @@
 class IWuffStrategy
 {
 public:
-	IWuffStrategy() {}
-	virtual void wuff() {}
+    virtual void wuff() = 0;
 	virtual ~IWuffStrategy() {}
 };
 
