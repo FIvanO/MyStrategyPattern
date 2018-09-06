@@ -1,11 +1,14 @@
 #include "wildwuffstrategy.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 void WildWuffStrategy::wuff() {
-    std::cout << "Wild wuff" << std::endl;
+    cout << "Wild wuff" << endl;
 }
 
 WildWuffStrategy::~WildWuffStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }

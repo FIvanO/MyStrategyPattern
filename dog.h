@@ -6,22 +6,24 @@
 #include "idisplaystrategy.h"
 #include <memory>
 
+using std::shared_ptr;
+
 class Dog
 {
 public:
     Dog(
-        std::shared_ptr<IRunStrategy>     _run_strategy,
-        std::shared_ptr<IWuffStrategy>    _wuff_strategy,
-        std::shared_ptr<IDisplayStrategy> _display_strategy
+        shared_ptr<IRunStrategy>     _run_strategy,
+        shared_ptr<IWuffStrategy>    _wuff_strategy,
+        shared_ptr<IDisplayStrategy> _display_strategy
     );
     void run();
     void wuff();
     void display();
     ~Dog();
 private:
-    std::shared_ptr<IRunStrategy>     run_strategy;
-    std::shared_ptr<IWuffStrategy>    wuff_strategy;
-    std::shared_ptr<IDisplayStrategy> display_strategy;
+    shared_ptr<IRunStrategy>     run_strategy;
+    shared_ptr<IWuffStrategy>    wuff_strategy;
+    shared_ptr<IDisplayStrategy> display_strategy;
 };
 
 #endif // DOG_H

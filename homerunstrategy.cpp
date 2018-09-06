@@ -1,11 +1,14 @@
 #include "homerunstrategy.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 void HomeRunStrategy::run() {
-    std::cout << "Home run" << std::endl;
+    cout << "Home run" << endl;
 }
 
 HomeRunStrategy::~HomeRunStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }

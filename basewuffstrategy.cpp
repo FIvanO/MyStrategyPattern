@@ -1,11 +1,14 @@
 #include "basewuffstrategy.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 void BaseWuffStrategy::wuff() {
-    std::cout << "Base wuff" << std::endl;
+    cout << "Base wuff" << endl;
 }
 
 BaseWuffStrategy::~BaseWuffStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }

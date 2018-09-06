@@ -1,11 +1,14 @@
 #include "baserunstrategy.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 void BaseRunStrategy::run() {
-    std::cout << "Base run" << std::endl;
+    cout << "Base run" << endl;
 }
 
 BaseRunStrategy::~BaseRunStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }

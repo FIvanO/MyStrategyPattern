@@ -1,11 +1,14 @@
 #include "rubberwuffstrategy.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 void RubberWuffStrategy::wuff() {
-    std::cout << "Rubber wuff" << std::endl;
+    cout << "Rubber wuff" << endl;
 }
 
 RubberWuffStrategy::~RubberWuffStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }

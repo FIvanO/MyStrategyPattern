@@ -13,32 +13,36 @@
 #include <memory>
 #include <ctime>
 
-typedef std::shared_ptr<IDisplayStrategy> SharedPtrDis;
-typedef std::shared_ptr<IRunStrategy>     SharedPtrRun;
-typedef std::shared_ptr<IWuffStrategy>    SharedPtrWuff;
+typedef shared_ptr<IDisplayStrategy> SharedPtrDis;
+typedef shared_ptr<IRunStrategy>     SharedPtrRun;
+typedef shared_ptr<IWuffStrategy>    SharedPtrWuff;
+
+using std::cout;
+using std::endl;
+using std::vector;
 
 int main()
 {
 
-    std::vector<SharedPtrDis> display_strategies;
+    vector<SharedPtrDis> display_strategies;
     display_strategies.push_back(SharedPtrDis(new TextDisplayStrategy()));
     display_strategies.push_back(SharedPtrDis(new GraphicDisplayStrategy()));
 
-    std::vector<SharedPtrRun> run_strategies;
+    vector<SharedPtrRun> run_strategies;
     run_strategies.push_back(SharedPtrRun(new HomeRunStrategy()));
     run_strategies.push_back(SharedPtrRun(new BaseRunStrategy()));
     run_strategies.push_back(SharedPtrRun(new NoRunStrategy()));
 
-    std::vector<SharedPtrWuff> wuff_strategies;
+    vector<SharedPtrWuff> wuff_strategies;
     wuff_strategies.push_back(SharedPtrWuff(new BaseWuffStrategy()));
     wuff_strategies.push_back(SharedPtrWuff(new WildWuffStrategy()));
     wuff_strategies.push_back(SharedPtrWuff(new RubberWuffStrategy()));
 
 //----------------------------------------------------
 
-    std::vector<std::shared_ptr<Dog>> dogs;
+    vector<shared_ptr<Dog>> dogs;
     dogs.push_back( // homeDog
-        std::shared_ptr<Dog>(
+        shared_ptr<Dog>(
             new Dog(
                 run_strategies    [static_cast<size_t>(run_type::home)],
                 wuff_strategies   [static_cast<size_t>(wuff_type::base)],
@@ -48,7 +52,7 @@ int main()
     ); // homeDog
 
     dogs.push_back( // cityDog
-        std::shared_ptr<Dog>(
+        shared_ptr<Dog>(
             new Dog(
                 run_strategies    [static_cast<size_t>(run_type::base)],
                 wuff_strategies   [static_cast<size_t>(wuff_type::base)],
@@ -58,7 +62,7 @@ int main()
     ); // cityDog
 
     dogs.push_back( // wildDog
-        std::shared_ptr<Dog>(
+        shared_ptr<Dog>(
             new Dog(
                 run_strategies    [static_cast<size_t>(run_type::base)],
                 wuff_strategies   [static_cast<size_t>(wuff_type::wild)],
@@ -68,7 +72,7 @@ int main()
     ); // wildDog
 
     dogs.push_back( // rubberDog
-        std::shared_ptr<Dog>(
+        shared_ptr<Dog>(
             new Dog(
                 run_strategies    [static_cast<size_t>(run_type::no_run)],
                 wuff_strategies   [static_cast<size_t>(wuff_type::rubber)],
@@ -80,7 +84,7 @@ int main()
 
     srand(time(nullptr));
     dogs.push_back( // randomDog 1
-        std::shared_ptr<Dog>(
+        shared_ptr<Dog>(
             new Dog(
                 run_strategies    [static_cast<size_t>(rand() % 3)],
                 wuff_strategies   [static_cast<size_t>(rand() % 3)],
@@ -90,7 +94,7 @@ int main()
     ); // randomDog 1
 
     dogs.push_back( // randomDog 2
-        std::shared_ptr<Dog>(
+        shared_ptr<Dog>(
             new Dog(
                 run_strategies    [static_cast<size_t>(rand() % 3)],
                 wuff_strategies   [static_cast<size_t>(rand() % 3)],
@@ -102,14 +106,14 @@ int main()
 
 
 	for (auto it = dogs.begin(); it != dogs.end(); ++it) {
-        std::cout << "New dog: \n";
-        std::cout << "  ";
+        cout << "New dog: \n";
+        cout << "  ";
 		(*it)->run();
-        std::cout << "  ";
+        cout << "  ";
         (*it)->wuff();
-        std::cout << "  ";
+        cout << "  ";
         (*it)->display();
-        std::cout << "End dog \n\n\n";
+        cout << "End dog \n\n\n";
     }
 
 

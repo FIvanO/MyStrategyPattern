@@ -1,11 +1,14 @@
 #include "norunstrategy.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 void NoRunStrategy::run() {
-    std::cout << "No run" << std::endl;
+    cout << "No run" << endl;
 }
 
 NoRunStrategy::~NoRunStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }

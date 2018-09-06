@@ -1,11 +1,14 @@
 #include "textdisplaystrategy.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 void TextDisplayStrategy::display() {
-    std::cout << "Display dog as text" << std::endl;
+    cout << "Display dog as text" << endl;
 }
 
 TextDisplayStrategy::~TextDisplayStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }

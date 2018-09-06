@@ -1,10 +1,13 @@
 #include "dog.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 Dog::Dog(
-    std::shared_ptr<IRunStrategy>     _run_strategy,
-    std::shared_ptr<IWuffStrategy>    _wuff_strategy,
-    std::shared_ptr<IDisplayStrategy> _display_strategy
+    shared_ptr<IRunStrategy>     _run_strategy,
+    shared_ptr<IWuffStrategy>    _wuff_strategy,
+    shared_ptr<IDisplayStrategy> _display_strategy
 )
 :
     run_strategy(_run_strategy),
@@ -26,6 +29,6 @@ void Dog::display() {
 }
 
 Dog::~Dog() {
-    std::cout << "\n" << __PRETTY_FUNCTION__ << std::endl;
+    cout << "\n" << __PRETTY_FUNCTION__ << endl;
 }
 

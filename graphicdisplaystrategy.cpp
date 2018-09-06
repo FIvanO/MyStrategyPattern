@@ -2,6 +2,9 @@
 #include <iostream>
 #include <string>
 
+using std::cout;
+using std::endl;
+
 void GraphicDisplayStrategy::display() {
     std::string dis_string =
             "__________________________________8888__________888\n"
@@ -30,10 +33,10 @@ void GraphicDisplayStrategy::display() {
             "_______88__88______________88__88\n"
             "_______88888888____________88888888\n"
             "_________88__88______________88__88\n";
-    std::cout << dis_string << std::endl;
+    cout << dis_string << endl;
 }
 
 GraphicDisplayStrategy::~GraphicDisplayStrategy()
 {
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    cout << __PRETTY_FUNCTION__ << endl;
 }
