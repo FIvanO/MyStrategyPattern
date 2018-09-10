@@ -11,17 +11,19 @@ The Dog has 3 strategies:
 - run strategy;
 - wuff strategy.
 
+<br/>
 There are interfaces for these strategies:
 - *IDisplayStrategy*;
 - *IRunStrategy*;
 - *IWuffStrategy*.
 
+<br/>
 And there are some realizations of interfaces: <br/>
 | *IDisplayStrategy*     | *IRunStrategy*  | *IWuffStrategy*    |
 | :--------------------: | :-------------: | :----------------: |
 | GraphicDisplayStrategy | BaseRunStrategy | BaseWuffStartegy   |
 | TextDisplayStrategy    | HomeRunStrategy | RubberWuffStrategy |
-| --                     | NoRunStrategy   | WildWuffStrategy   |
+|                        | NoRunStrategy   | WildWuffStrategy   |
 
 In **main.cpp** we create **6 Dogs**. 
 For **4 of them** we choose strategies in own way; for **2 more**, we choose strategies randomly. 
