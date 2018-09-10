@@ -16,12 +16,12 @@ There are interfaces for these strategies:
 - *IRunStrategy*;
 - *IWuffStrategy*.
 
-And there are some realizations of interfaces:
-| *IDisplayStrategy* | *IRunStrategy* | *IWuffStrategy* |
-| ------ | ------ | ------ |
-|GraphicDisplayStrategy|BaseRunStrategy|BaseWuffStartegy|
-|TextDisplayStrategy|HomeRunStrategy|RubberWuffStrategy|
-|--|NoRunStrategy|WildWuffStrategy|
+And there are some realizations of interfaces: <br/>
+| *IDisplayStrategy*     | *IRunStrategy*  | *IWuffStrategy*    |
+| :--------------------: | :-------------: | :----------------: |
+| GraphicDisplayStrategy | BaseRunStrategy | BaseWuffStartegy   |
+| TextDisplayStrategy    | HomeRunStrategy | RubberWuffStrategy |
+| --                     | NoRunStrategy   | WildWuffStrategy   |
 
 In **main.cpp** we create **6 Dogs**. 
 For **4 of them** we choose strategies in own way; for **2 more**, we choose strategies randomly. 
@@ -30,6 +30,6 @@ Then for each dog, call all methods:
 - wuff(); 
 - display();
 
-If you have any questions, please contact me in these ways:
-*e-mail:* FIvanO1998@gmail.com
+If you have any questions, please contact me in these ways: <br/>
+*e-mail:* FIvanO1998@gmail.com <br/>
 *LinkedIn:* linkedin.com/in/FIvanO
