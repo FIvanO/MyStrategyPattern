@@ -12,11 +12,13 @@
 #include <vector>
 #include <memory>
 #include <ctime>
+#include <string>
 
 typedef shared_ptr<IDisplayStrategy> SharedPtrDis;
 typedef shared_ptr<IRunStrategy>     SharedPtrRun;
 typedef shared_ptr<IWuffStrategy>    SharedPtrWuff;
 
+using std::cin;
 using std::cout;
 using std::endl;
 using std::vector;
@@ -114,6 +116,8 @@ int main()
         cout << "  ";
         (*it)->display();
         cout << "End dog \n\n\n";
+        std::string wait;
+        getline(cin, wait);
     }
 
 
